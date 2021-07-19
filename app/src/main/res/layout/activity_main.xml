@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".UI.CompassMain">
 
     <ImageView
         android:id="@+id/arrow"
@@ -38,9 +38,9 @@
         android:id="@+id/destiantion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
-        android:text="Set destination"
+        android:layout_marginBottom="64dp"
         android:backgroundTint="#3ED955"
+        android:text="Set destination"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -50,7 +50,7 @@
         android:id="@+id/Distance"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/rounded_corner"
         android:padding="10dp"
         android:textAlignment="center"
