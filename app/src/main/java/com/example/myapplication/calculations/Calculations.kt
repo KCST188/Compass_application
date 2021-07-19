@@ -15,12 +15,12 @@ class Calculations {
     private var destLatitudeRad: Double = 0.0
     private var destLongitudeRad: Double = 0.0
 
-    fun calculateAzimuth(loc: Location, x: Double, y: Double): Int {
+    fun calculateAzimuth(locLati: Double, locLong: Double, x: Double, y: Double): Int {
         //change latitude and longitude of 2 coordinates to radians
         destLongitudeRad = Math.toRadians(y)
         destLatitudeRad = Math.toRadians(x)
-        latitude = Math.toRadians(loc.latitude)
-        longitude = Math.toRadians(loc.longitude)
+        latitude = Math.toRadians(locLati)
+        longitude = Math.toRadians(locLong)
         deltaLambda = destLongitudeRad - longitude
         deltaFi = destLatitudeRad - latitude
         //calculate destination point azimuth from given function

@@ -79,7 +79,9 @@ class CompassMain : AppCompatActivity(), LocationListener, SensorEventListener {
             //request location update every second with no minimal distance
             locationManger.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0f, this)
             if (location != null) {
-                destinationAzimuth = calculations.calculateAzimuth(location, destLatitude, destLongitude)
+                val locLati = location.latitude
+                val locLong = location.longitude
+                destinationAzimuth = calculations.calculateAzimuth(locLati, locLong, destLatitude, destLongitude)
                 destinationDistance = calculations.calculateDistance()
                 val distance = findViewById<TextView>(R.id.Distance)
                 distance.text = "Distance to the destination: $destinationDistance m"
